@@ -1,2 +1,12 @@
-# Personal-portfolio-website
-Personal portfolio website showcasing my skills, projects, and experience in Computer Science and Engineering, with a focus on Python, AI, and Machine Learning.
+# Mashrafi Anam – Portfolio
+
+This is my personal portfolio website showcasing my skills,
+projects, and experience.
+
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+
+## Live Website
+https://mashportfolio.netlify.app/
