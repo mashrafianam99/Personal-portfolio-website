@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mashrafi Anam | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header id="navbar">
+    <div class="logo">Portfolio</div>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- PAGE 1 : HOME -->
+<section id="hero" class="page hero">
+    <div class="hero-text">
+        <h4>Hello, I am</h4>
+
+        <h1>
+            <span>Mashrafi</span><br>
+            <span>Anam</span>
+        </h1>
+
+        <p>A young <span>CSE Engineer</span> passionate for <span>AI & ML</span>.</p>
+
+        <div class="socials">
+            <a href="https://www.facebook.com/mashrafibin.anam.3" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://github.com/mashrafianam99/" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+        <div class="buttons">
+            <a href="about.html" class="btn-red">About Me</a>
+            <button class="btn-dark" onclick="document.querySelector('#skills').scrollIntoView()">
+                Scroll Down
+            </button>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="image-glow"></div>
+        <img src="images/portfolio.png" alt="profile">
+    </div>
+
+    <div class="scroll-indicator">↓ Scroll</div>
+</section>
+
+<!-- BREAKTHROUGH CURTAIN -->
+<div class="breakthrough"></div>
+
+<!-- PAGE 2 : SKILLS -->
+<section id="skills" class="page work">
+    <h2>Skills</h2>
+
+    <div class="skill-grid">
+        <!-- Python is clickable -->
+        <a href="python.html" class="skill-card">Python</a>
+
+        <div class="skill-card">Machine Learning</div>
+        <div class="skill-card">Deep Learning</div>
+        <div class="skill-card">TensorFlow</div>
+        <div class="skill-card">PyTorch</div>
+        <div class="skill-card">Computer Vision</div>
+        <div class="skill-card">NLP</div>
+        <div class="skill-card">Data Analysis</div>
+    </div>
+</section>
+
+<!-- PAGE 3 : PROJECTS -->
+<section id="projects" class="page work">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>AI Attendance System</h3>
+            <p>Face recognition based smart attendance system.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>ML Prediction Model</h3>
+            <p>Prediction model using Scikit-learn.</p>
+        </div>
+    </div>
+</section>
+
+<!-- PAGE 4 : CONTACT -->
+<section id="contact" class="page work">
+    <h2>Contact Me</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <p><i class="fas fa-envelope"></i> mashrafianam99@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +8801309086383</p>
+            <p><i class="fas fa-location-dot"></i> Bangladesh</p>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
