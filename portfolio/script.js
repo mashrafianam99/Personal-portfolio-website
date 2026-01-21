@@ -1,5 +1,21 @@
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll("nav a");
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+// Mobile menu toggle
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+});
+
+// Close menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        menuToggle.classList.remove("active");
+    });
+});
 
 window.addEventListener("scroll", () => {
     let current = "";
