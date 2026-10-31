@@ -1,4 +1,3 @@
-```css
 /* RESET */
 * {
     margin: 0;
@@ -35,21 +34,13 @@ header {
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* CUSTOM PORTFOLIO LOGO */
 .logo {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
 }
 
-.logo img {
-    width: 150px;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-/* NAVIGATION */
 nav {
     display: flex;
     gap: 35px;
@@ -96,7 +87,6 @@ nav a {
     transform: rotate(-45deg) translate(11px, -11px);
 }
 
-/* NAVIGATION HOVER EFFECT */
 nav a::after {
     content: "";
     position: absolute;
@@ -142,7 +132,7 @@ nav a.active::after {
 }
 
 .hero-text {
-    max-width: 620px;
+    max-width: 620px; /* MASTER WIDTH */
 }
 
 .hero-text h1 {
@@ -208,10 +198,10 @@ nav a.active::after {
 }
 
 /* =========================
-   ABOUT
+   ABOUT (PERFECT MATCH)
 ========================= */
 .about-box {
-    max-width: 620px;
+    max-width: 620px; /* SAME AS HERO */
     width: 100%;
 }
 
@@ -295,10 +285,6 @@ nav a.active::after {
     header {
         padding: 14px 16px;
         gap: 16px;
-    }
-
-    .logo img {
-        width: 130px;
     }
 
     .menu-toggle {
@@ -468,17 +454,13 @@ nav a.active::after {
     }
 }
 
-/* =========================
-   SMALL MOBILE DEVICES
-========================= */
 @media (max-width: 480px) {
-
     header {
         padding: 12px 12px;
     }
 
-    .logo img {
-        width: 115px;
+    .logo {
+        font-size: 18px;
     }
 
     nav {
