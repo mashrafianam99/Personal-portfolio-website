@@ -1,0 +1,104 @@
+/* Portfolio content — edit this file to update the site. */
+window.PROFILE = Object.freeze({
+  name: 'Mashrafi Anam',
+  github: 'mashrafianam99',
+  // Fill these in to show them in the Contact section (left empty = hidden).
+  email: '',
+  linkedin: '',
+});
+
+window.DISCIPLINES = Object.freeze(['AI / ML', 'Full-Stack', 'Web', 'Python']);
+
+window.PROJECTS = Object.freeze([
+  {
+    id: 'documind',
+    title: 'DocuMind AI',
+    date: '2026-11',
+    discipline: ['AI / ML', 'Full-Stack'],
+    lang: 'TypeScript',
+    stack: ['Next.js', 'TypeScript', 'Tailwind', 'FastAPI', 'Supabase', 'pgvector', 'Jina AI', 'Groq'],
+    summary: 'A document assistant that lets you chat with PDFs and get answers grounded in the source, with page references.',
+    features: [
+      'PDF upload, text extraction and chunking in a FastAPI backend',
+      'Semantic retrieval with jina-embeddings-v3 + Supabase pgvector',
+      'Groq-generated answers with source excerpts and page citations',
+      'Frontend on Vercel, API on Render',
+    ],
+    repo: 'https://github.com/mashrafianam99/DocuMind-AI',
+    live: 'https://docu-mind-ai-navy.vercel.app',
+  },
+  {
+    id: 'metsol',
+    title: 'Smart University Portal',
+    date: '2026-11',
+    discipline: ['Full-Stack', 'AI / ML'],
+    lang: 'JavaScript',
+    stack: ['React', 'Vite', 'Express', 'PostgreSQL', 'Prisma', 'JWT', 'Groq'],
+    summary: 'A multilingual university portal for students, teachers and admins, with result imports, Google Classroom sync and an AI assistant.',
+    features: [
+      'Role-based access for Student, Teacher and Admin, enforced on the server',
+      'Conservative result-PDF parser with SHA-256 duplicate detection',
+      'Live Google Classroom assignments with due-date status',
+      'Groq AI assistant with demo fallback; bKash/Nagad-ready payments',
+    ],
+    repo: 'https://github.com/mashrafianam99/metsol',
+    live: '',
+  },
+  {
+    id: 'portfolio',
+    title: 'Personal Portfolio v1',
+    date: '2026-10',
+    discipline: ['Web'],
+    lang: 'CSS',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    summary: 'My first portfolio site, showing my skills and projects in CSE with a focus on Python and machine learning.',
+    features: ['Responsive single-page layout', 'Skills and projects sections', 'Hand-written CSS'],
+    repo: 'https://github.com/mashrafianam99/Personal-portfolio-website',
+    live: '',
+  },
+  {
+    id: 'pdf-summarizer',
+    title: 'PDF Summarizer',
+    date: '2026-03',
+    discipline: ['AI / ML', 'Python'],
+    lang: 'Python',
+    stack: ['Python', 'Streamlit', 'OpenAI-compatible API', 'Docker'],
+    summary: 'Turns PDFs into bullet-point summaries and lets you ask questions or clear up confusing concepts.',
+    features: [
+      'Bullet-point summarisation of PDF content',
+      'Q&A and doubt-clarification modes with chat history',
+      'Dockerised and deployed on Render',
+    ],
+    repo: 'https://github.com/mashrafianam99/pdf-summarizer',
+    live: 'https://pdf-summarizer-4.onrender.com',
+  },
+  {
+    id: 'expense-tracker',
+    title: 'Expense Tracker',
+    date: '2026-03',
+    discipline: ['Python', 'Full-Stack'],
+    lang: 'Python',
+    stack: ['Python', 'Flask', 'SQLite', 'HTML', 'CSS'],
+    summary: 'A clean web app for adding, viewing and deleting daily expenses, stored in SQLite.',
+    features: ['Card-based dashboard with totals', 'Category and date filtering', 'Persistent SQLite storage'],
+    repo: 'https://github.com/mashrafianam99/expense-tracker',
+    live: '',
+  },
+  {
+    id: 'weather',
+    title: 'Weather Forecast',
+    date: '2026-03',
+    discipline: ['Web'],
+    lang: 'CSS',
+    stack: ['HTML', 'CSS', 'JavaScript', 'OpenWeatherMap API'],
+    summary: 'Real-time weather for any city: temperature, humidity, wind and a 5-day forecast.',
+    features: ['City search', 'Current conditions + 5-day forecast', 'Responsive interface'],
+    repo: 'https://github.com/mashrafianam99/weather-forecast-app',
+    live: '',
+  },
+]);
+
+window.TOOLKIT = Object.freeze([
+  'Python', 'Machine Learning', 'RAG', 'Next.js', 'TypeScript', 'FastAPI', 'React',
+  'PostgreSQL', 'pgvector', 'Supabase', 'Flask', 'Prisma', 'Docker', 'Groq', 'Tailwind',
+]);
