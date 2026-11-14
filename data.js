@@ -11,6 +11,23 @@ window.DISCIPLINES = Object.freeze(['AI / ML', 'Full-Stack', 'Web', 'Python']);
 
 window.PROJECTS = Object.freeze([
   {
+    id: 'study-grove',
+    title: 'Study Grove',
+    date: '2026-11',
+    discipline: ['Web'],
+    lang: 'JavaScript',
+    stack: ['JavaScript', 'Three.js', 'PWA', 'Service Worker', 'Vercel'],
+    summary: 'A study planner where every focus session grows a tree on a small 3D island.',
+    features: [
+      'Focus timer, daily tasks and exam countdowns',
+      'Spaced-repetition reviews after 1, 3, 7, 21 and 45 days',
+      '26-week heatmap, streaks, levels and a day/night sky',
+      'Installable offline PWA with strict security headers',
+    ],
+    repo: 'https://github.com/mashrafianam99/study-grove',
+    live: 'https://study-grove-five.vercel.app',
+  },
+  {
     id: 'documind',
     title: 'DocuMind AI',
     date: '2026-11',
