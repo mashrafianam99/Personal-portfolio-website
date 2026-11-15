@@ -381,7 +381,7 @@
       <ul class="feat">${p.features.map((f) => `<li>${escapeHtml(f)}</li>`).join('')}</ul>
       <h3 class="mono dim">Stack</h3>
       <div class="tags">${p.stack.map((s) => `<span class="tag">${escapeHtml(s)}</span>`).join('')}</div>
-      <div class="drawer-ctas">${live}<a class="btn btn-ghost" href="${escapeHtml(p.repo)}" target="_blank" rel="noopener">View source ↗</a></div>
+      <div class="drawer-ctas">${live}${p.android ? `<a class="btn btn-ghost" href="${escapeHtml(p.android)}" rel="noopener">Download Android app ↓</a>` : ''}<a class="btn btn-ghost" href="${escapeHtml(p.repo)}" target="_blank" rel="noopener">View source ↗</a></div>
       <nav class="drawer-nav" aria-label="Project navigation">
         <button data-goto="${prev.id}" class="mono">← Previous<strong>${escapeHtml(prev.title)}</strong></button>
         <button data-goto="${next.id}" class="mono">Next →<strong>${escapeHtml(next.title)}</strong></button>
