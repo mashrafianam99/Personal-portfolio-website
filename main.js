@@ -486,13 +486,16 @@
   }
 
   /* ─────────── About: stats + live GitHub count ─────────── */
-  function countUp(el, to) {
-    if (prefersReducedMotion) { el.textContent = String(to); return; }
+  // Reads the target from data-count every frame so a late GitHub response still lands.
+  function countUp(el) {
+    const done = () => { el.textContent = el.dataset.count; el.dataset.counted = '1'; };
+    if (prefersReducedMotion) { done(); return; }
     const start = performance.now(), DURATION = 1200;
     const step = (now) => {
       const t = Math.min(1, (now - start) / DURATION);
-      el.textContent = String(Math.round(to * (1 - Math.pow(1 - t, 3))));
-      if (t < 1) requestAnimationFrame(step);
+      if (t >= 1) { done(); return; }
+      el.textContent = String(Math.round(Number(el.dataset.count) * (1 - Math.pow(1 - t, 3))));
+      requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
   }
@@ -502,7 +505,10 @@
       const res = await fetch(`https://api.github.com/users/${encodeURIComponent(PROFILE.github)}`, { headers: { Accept: 'application/vnd.github+json' } });
       if (!res.ok) throw new Error(`GitHub API responded ${res.status}`);
       const data = await res.json();
-      if (Number.isInteger(data.public_repos)) $('#statRepos').dataset.count = String(data.public_repos);
+      if (!Number.isInteger(data.public_repos)) return;
+      const dd = $('#statRepos');
+      dd.dataset.count = String(data.public_repos);
+      if (dd.dataset.counted) dd.textContent = dd.dataset.count; // response arrived after the animation
     } catch (err) {
       console.warn('[portfolio] Using bundled repo count:', err.message);
     }
@@ -514,7 +520,7 @@
       if (!e.isIntersecting) return;
       io.disconnect();
       await Promise.race([repoPromise, sleep(800)]);
-      $$('#stats dd[data-count]').forEach((dd) => countUp(dd, Number(dd.dataset.count)));
+      $$('#stats dd[data-count]').forEach((dd) => countUp(dd));
     }, { threshold: 0.4 });
     io.observe($('#stats'));
   }
